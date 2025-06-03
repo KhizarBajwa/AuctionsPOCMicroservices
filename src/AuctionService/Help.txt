@@ -1,0 +1,8 @@
+To Drop Database 
+
+dotnet ef database drop
+
+
+Migration
+
+dotnet ef migrations add "Initial migration" -o Data/Migrations
