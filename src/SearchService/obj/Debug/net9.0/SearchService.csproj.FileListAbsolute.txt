@@ -39,3 +39,4 @@
 /Users/bajwa/Documents/Workspace/DotNetProjects/AuctionsPOCMicroservices/src/SearchService/bin/Debug/net9.0/SharpCompress.dll
 /Users/bajwa/Documents/Workspace/DotNetProjects/AuctionsPOCMicroservices/src/SearchService/bin/Debug/net9.0/Snappier.dll
 /Users/bajwa/Documents/Workspace/DotNetProjects/AuctionsPOCMicroservices/src/SearchService/bin/Debug/net9.0/ZstdSharp.dll
+/Users/bajwa/Documents/Workspace/DotNetProjects/AuctionsPOCMicroservices/src/SearchService/bin/Debug/net9.0/Data/auctions.json

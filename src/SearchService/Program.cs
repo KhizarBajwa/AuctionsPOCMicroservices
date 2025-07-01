@@ -39,13 +39,15 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-await MongoDB.Entities.DB.InitAsync("SearchDb", MongoClientSettings.
-FromConnectionString(builder.Configuration.GetConnectionString("MongoDbConnection")));
+try
+{
+    // Initialize the database connection and seed data
+    await SearchService.Data.DbInitializer.InitializeAsync(app);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"An error occurred during database initialization: {ex.Message}");
+}
 
-await MongoDB.Entities.DB.Index<SearchService.Models.Item>()
-    .Key(x => x.Make, KeyType.Text)
-    .Key(x => x.Model, KeyType.Text)
-    .Key(x => x.Color, KeyType.Text)
-    .CreateAsync();
 
 app.Run();
