@@ -1,0 +1,42 @@
+# Move to your projects directory
+cd ~/DotNetProjects
+
+# Create a new folder for the project
+mkdir Carsties
+cd Carsties
+
+# Clear terminal
+clear
+
+# Show available .NET project templates
+dotnet new list
+
+# Create a new solution file
+dotnet new sln
+
+# List directory contents (optional)
+ls
+
+# ✅ Create a new Web API project in a subfolder using controllers
+dotnet new webapi --use-controllers -o src/AuctionService
+
+# Add the new project to the solution
+dotnet sln add src/AuctionService
+
+# Optional: Start the development server with hot reload
+dotnet watch
+
+# Show installed global tools
+dotnet tool list -g
+
+
+# ✅ Proper update for Entity Framework tool:
+dotnet tool update dotnet-ef -g
+
+# Add EF Core initial migration
+dotnet ef migrations add "Initial migration" -o Data/Migrations
+
+# Start dotnet watcher again
+dotnet watch
+
+

@@ -1,0 +1,33 @@
+# Initialize a new git repository
+git init
+
+# Create a .gitignore for .NET
+dotnet new gitignore
+
+# Stage and commit initial files
+git add .
+git commit -m "Initial AuctionService commit"
+
+# Add remote origin (only do this once)
+git remote add origin https://github.com/KhizarBajwa/AuctionsPOCMicroservices.git
+
+# Check current branch name (might be 'master' or 'main')
+git branch
+
+# If you're on 'master' but want to use 'main':
+git checkout -b main
+git push --set-upstream origin main
+
+# ✅ OR if 'main' already exists remotely and you just want to switch:
+git fetch
+git checkout main
+
+# If you already pushed to 'master' by mistake and want to switch to 'main':
+# (optional cleanup)
+git branch -d master
+
+# Verify and switch branches
+git branch
+git fetch
+git checkout main    # or master depending on what you want
+git pull
